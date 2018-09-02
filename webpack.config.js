@@ -26,6 +26,7 @@ const config = {
     compress: true,
     // stats: 'errors-only',
     port: 3000,
+    //host: '192.168.1.109',
     proxy: {
       '/data': 'http://localhost:9000',
     },
