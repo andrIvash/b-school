@@ -78,3 +78,8 @@ body {
   position: relative;
   height: 100%;
 }
+
+.ReactModal__Content {
+  width: rem(450px);
+  min-height: rem(100px);
+}
