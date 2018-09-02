@@ -1,5 +1,6 @@
 // @flow
 import React, { Component } from 'react';
+import Modal from 'react-modal';
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 import Bullying from '../Bullying/Bullying';
 import Consultant from '../Consultant/Consultant';
@@ -13,10 +14,27 @@ import type { User } from '../../flow-types';
 type State = {
   isLoading: boolean,
   user: User,
-  activeScreen: String | null
+  activeScreen: String | null,
+  modalIsOpen: boolean,
 };
 
 const api = new API();
+
+// modal settings
+Modal.setAppElement('#app');
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+  overlay: {
+    backgroundColor: 'cornsilk',
+  },
+};
 
 class App extends Component<{}, State> {
 
@@ -24,6 +42,7 @@ class App extends Component<{}, State> {
     isLoading: false,
     user: null,
     activeScreen: null,
+    modalIsOpen: false,
   }
 
   componentDidMount() {
@@ -40,21 +59,32 @@ class App extends Component<{}, State> {
   getUserInfo = () => {
     this.setState({ isLoading: true });
     api.getUserInfo().then((res) => {
-      this.setState({ isLoading: false });
-      console.log('res__', res);
-      const roles = api.getData().user.roles;
-      if (this.isEdu(roles) || this.isParent(roles)) {
-        console.log('wellcome !');
-        this.setState({ user: res });
-      } else {
-        console.log('Активность возможна только для преподавателей и родителей!');
-      }
+      setTimeout(() => {
+        this.setState({ isLoading: false });
+        console.log('res__', res);
+        const roles = api.getData().user.roles;
+        console.log(this.isEdu(roles), this.isParent(roles));
+        if (this.isEdu(roles) || this.isParent(roles)) {
+          console.log('welcome !');
+          this.setState({ user: res });
+        } else {
+          this.setState({ modalIsOpen: true });
+          console.log('Активность возможна только для преподавателей и родителей!');
+        }
+      }, 2000);
     });
   }
 
-  isEdu = roles => { roles.find(role => role === 'EduStaff'); }
+  openModal = () => {this.setState({ modalIsOpen: true }); }
 
-  isParent = roles => { roles.find(role => role === 'EduParent'); }
+  closeModal = () => {
+    this.setState({ modalIsOpen: false });
+    window.location.reload();
+  }
+
+  isEdu = roles => roles.find(role => role === 'EduStaff');
+
+  isParent = roles => roles.find(role => role === 'EduParent');
 
   activeScreen = () => {
     const { activeScreen } = this.state;
@@ -69,7 +99,7 @@ class App extends Component<{}, State> {
         break;
       }
       case 'lice': {
-        activeComponent = <Lice />;
+      activeComponent = <Lice />;
         break;
       }
       default: {
@@ -86,6 +116,42 @@ class App extends Component<{}, State> {
   }
 
   render() {
+    const { isLoading, modalIsOpen, user } = this.state;
+    if (isLoading) {
+      return (
+        <div className='wrapper'>
+          <ErrorBoundary>
+            <header />
+            <main className='main'>
+              Loading ...
+            </main>
+            <footer>footer</footer>
+          </ErrorBoundary>
+        </div>
+      );
+    }
+
+    if (modalIsOpen || user === null) {
+      return (
+        <div className='wrapper'>
+          <ErrorBoundary>
+            <header />
+            <main className='main' />
+            <footer />
+            <Modal
+              isOpen={this.state.modalIsOpen}
+              onRequestClose={this.closeModal}
+              style={customStyles}
+              >
+              <h2>Hello</h2>
+              <button onClick={this.closeModal}>close</button>
+              <div>I am a modal</div>
+            </Modal>
+          </ErrorBoundary>
+        </div>
+      );
+    }
+
     return (
       <div className='wrapper'>
         <ErrorBoundary>

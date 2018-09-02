@@ -40,9 +40,6 @@ export class API {
  */
   drawAuthPage() {
     const body = document.getElementsByTagName('body');
-    // let html = '<div class="auth-container">';
-    // html += '<div class="auth-container__text">Это окно закроется через несколько секунд</div>';
-    // html += '</div>';
     const html = `
       <div class="auth-container">
         <div class="auth-container__text">
