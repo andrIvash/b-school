@@ -1,7 +1,6 @@
 // @flow
 
 import React from 'react';
-import './ChatItem.scss';
 
 type Props = {
   active: Number,
@@ -31,6 +30,7 @@ const ChatItem = (props: Props) => {
   return (
     <li className={activeClass}>
       <p
+        className='citem__title'
         onClick={() => {props.setActive(props.id)}}
         role='button'
         >

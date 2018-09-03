@@ -1,7 +1,6 @@
 // @flow
 import React, { Component } from 'react';
 import ChatItem from '../ChatItem/ChatItem';
-import './Chat.scss';
 
 type State = {
   data: Array<Object>
