@@ -1,5 +1,7 @@
+
+
 @mixin url($file) {
-  background-image: url('./' + $file);
+  background-image: url('./images/' + $file);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

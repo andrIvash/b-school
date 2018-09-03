@@ -4,6 +4,7 @@ import Modal from 'react-modal';
 import ErrorBoundary from '../ErrorBoundary/ErrorBoundary';
 import Bullying from '../Bullying/Bullying';
 import Consultant from '../Consultant/Consultant';
+import Header from '../Header/Header';
 import Main from '../Main/Main';
 import Lice from '../Lice/Lice';
 import { API } from '../../helpers/api';
@@ -13,7 +14,7 @@ import type { User } from '../../flow-types';
 
 type State = {
   isLoading: boolean,
-  user: User,
+  user: User | null,
   activeScreen: String | null,
   modalIsOpen: boolean,
 };
@@ -87,7 +88,7 @@ class App extends Component<Props, State> {
     });
   }
 
-   handleScroll = () => {
+  handleScroll = () => {
     const scrollTop = window.pageYOffset;
     const node = this.backTop.current;
 
@@ -186,7 +187,7 @@ class App extends Component<Props, State> {
     return (
       <div className='wrapper'>
         <ErrorBoundary>
-          <header>header</header>
+          <Header selectScreen={this.selectScreen} />
           <main className='main'>
             {this.activeScreen()}
           </main>

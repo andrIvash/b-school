@@ -142,7 +142,7 @@ const config = {
           {
             loader: 'url-loader',
             options: {
-              limit: 65000,
+              limit: 50,
               mimetype: 'image/svg+xml',
               publicPath: '../../',
               name: './assets/images/[name].[ext]',
