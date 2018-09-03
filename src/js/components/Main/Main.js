@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+import Chat from '../Chat/Chat';
 
 type Props = {
   selectScreen: (evt: EventTarget) => void,
@@ -43,6 +44,7 @@ const Main = (props: Props) => (
     sdfsdfsdfdsfsdfsdf
     sdfsdfsdfsdfsdfsdf
     sdfsdfsdfsdfsfsdfs
+    <Chat />
   </div>
 );
 

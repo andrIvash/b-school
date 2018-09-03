@@ -188,9 +188,9 @@ class App extends Component<Props, State> {
       <div className='wrapper'>
         <ErrorBoundary>
           <Header selectScreen={this.selectScreen} />
-          <main className='main'>
+          <div className='main' role='main'>
             {this.activeScreen()}
-          </main>
+          </div>
           <footer>footer</footer>
           <button
             className='back-top'
