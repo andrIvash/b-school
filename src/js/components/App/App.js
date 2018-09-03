@@ -18,6 +18,8 @@ type State = {
   modalIsOpen: boolean,
 };
 
+type Props = {};
+
 const api = new API();
 
 // modal settings
@@ -36,17 +38,23 @@ const customStyles = {
   },
 };
 
-class App extends Component<{}, State> {
+class App extends Component<Props, State> {
+  constructor(props) {
+    super(props: Props);
 
-  state = {
-    isLoading: false,
-    user: null,
-    activeScreen: null,
-    modalIsOpen: false,
+    this.backTop = React.createRef();
+    this.state = {
+      isLoading: false,
+      user: null,
+      activeScreen: null,
+      modalIsOpen: false,
+    };
   }
 
   componentDidMount() {
     console.log('Running App version ! ' + window.env.API );
+    window.addEventListener('scroll', this.handleScroll);
+
     api.init();
     if (void 0 !== Cookie.get('token')) {
       api.token = Cookie.get('token');
@@ -54,6 +62,10 @@ class App extends Component<{}, State> {
     } else if (document.location.search.indexOf('auth') === -1) {
       Auth.auth();
     }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
   }
 
   getUserInfo = () => {
@@ -72,6 +84,25 @@ class App extends Component<{}, State> {
           console.log('Активность возможна только для преподавателей и родителей!');
         }
       }, 2000);
+    });
+  }
+
+   handleScroll = () => {
+    const scrollTop = window.pageYOffset;
+    const node = this.backTop.current;
+
+    if (scrollTop > 150) {
+      node.className = 'back-top animated fadeIn';
+    }
+    if ( scrollTop < 150 && node.classList.contains('fadeIn')) {
+        node.className = 'back-top animated fadeOut';
+    }
+  }
+
+  scrollTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
     });
   }
 
@@ -160,6 +191,14 @@ class App extends Component<{}, State> {
             {this.activeScreen()}
           </main>
           <footer>footer</footer>
+          <button
+            className='back-top'
+            onClick={this.scrollTop}
+            ref={this.backTop}
+            type='button'
+            >
+            вверх
+          </button>
         </ErrorBoundary>
       </div>
     );
