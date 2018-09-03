@@ -22,6 +22,7 @@ class Chat extends Component<Props, State> {
             id: 1,
             question: '1+1',
             answer: '2',
+            show: false,
           },
         ],
       },
@@ -33,25 +34,39 @@ class Chat extends Component<Props, State> {
             id: 1,
             question: '2+2',
             answer: '4',
+            show: false,
           },
         ],
       },
     ],
   }
 
-  getAnswer = (id: Number) => {
-    const { data } = this.state;
-    console.log(data.find(elem => elem.id === id));
-  }
-
   setActive = (id: Number) => {
     this.setState({activeItem: id === this.state.activeItem ? null : id });
+  }
+
+  showAnswer = (id: Number) => {
+    const { data } = this.state;
+    console.log(data.find(elem => elem.id === id));
+    this.setState(prevState => ({
+      ...prevState,
+      someProperty: {
+        ...prevState.someProperty,
+        someOtherProperty: {
+          ...prevState.someProperty.someOtherProperty,
+          anotherProperty: {
+              ...prevState.someProperty.someOtherProperty.anotherProperty,
+              flag: false,
+          },
+        },
+      },
+    }));
   }
 
   listQuestions = () => this.state.data.map(item => (
     <ChatItem
       active={this.state.activeItem}
-      getAnswer={this.getAnswer}
+      showAnswer={this.showAnswer}
       id={item.id}
       key={item.id}
       setActive={this.setActive}

@@ -5,7 +5,7 @@ import React from 'react';
 type Props = {
   active: Number,
   sublist: Array<Object>,
-  getAnswer: (id: Number) => void,
+  showAnswer: (id: Number) => void,
   id: Number,
   key: Number,
   setActive: (id: Number) => void,
@@ -17,10 +17,15 @@ const subList = (props: Props) => props.sublist.map(item => (
   <li
     className='citem__button'
     key={item.id}
-    onClick={() => props.getAnswer(props.id)}
+    onClick={() => props.showAnswer(props.id)}
     role='button'
     >
-    {item.question}
+    <p>
+      {item.question}
+    </p>
+    <p>
+
+    </p>  
   </li>
 )); 
 
