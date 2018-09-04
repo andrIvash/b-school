@@ -11,8 +11,7 @@ $color-logo-dark: #8F121E;
 $color-dark: #000000;
 $color-title: #7E157C;
 $color-base-backgound: #FAFAFA;
-$color-background: #343A40;
-$color-background-light: #DBD3D8;
+$color-backlink: #DC98DB;
 $color-white: #fff;
 
 
@@ -98,6 +97,7 @@ body {
   border: 1px solid green;
   border-radius: 15%;
   cursor: pointer;
+  z-index: 999;
 }
 
 .animated {
