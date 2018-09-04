@@ -79,7 +79,7 @@ const config = {
       title: 'My App',
       window: {
         env: {
-          apiHost: 'http://myapi.com/api/v1',
+          apiHost: 'http://localhost:3000',
         },
       },
     }),

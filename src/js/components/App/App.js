@@ -130,7 +130,11 @@ class App extends Component<Props, State> {
         break;
       }
       case 'lice': {
-      activeComponent = <Lice />;
+        activeComponent = <Lice />;
+        break;
+      }
+      case 'main': {
+        activeComponent = <Main selectScreen={this.selectScreen} />;
         break;
       }
       default: {
@@ -143,8 +147,30 @@ class App extends Component<Props, State> {
   selectScreen = evt => {
     evt.preventDefault();
     const elem = evt.target;
-    this.setState({ activeScreen: elem.dataset.screen });
+    if (elem.dataset.screen) {
+      this.setState({ activeScreen: elem.dataset.screen });
+    }
   }
+
+  burgerToggle = evt => {
+    evt.preventDefault();
+		const linksEl = document.querySelector('.narrowLinks');
+    const closeBtn = document.querySelector('#hamburger-1');
+		if (linksEl.style.display === 'block') {
+      linksEl.classList.remove('fadeInLeft');
+      document.body.classList.remove('no-sroll');
+      closeBtn.classList.remove('is-active');
+      document.body.style.overflow = 'auto';
+      linksEl.style.display = 'none';
+		} else {
+			linksEl.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+      linksEl.classList.add('fadeInLeft');
+      closeBtn.classList.add('is-active');
+      document.body.classList.add('no-sroll');
+		}
+    this.selectScreen(evt);
+	}
 
   render() {
     const { isLoading, modalIsOpen, user } = this.state;
@@ -186,7 +212,11 @@ class App extends Component<Props, State> {
     return (
       <div className='wrapper'>
         <ErrorBoundary>
-          <Header selectScreen={this.selectScreen} />
+          <Header
+            activeScreen={this.state.activeScreen}
+            burgerToggle={this.burgerToggle}
+            selectScreen={this.selectScreen}
+          />
           <div className='main' role='main'>
             {this.activeScreen()}
           </div>
