@@ -53,9 +53,8 @@ class App extends Component<Props, State> {
   }
 
   componentDidMount() {
-    console.log('Running App version ! ' + window.env.API );
+    console.log('Running App version ! ' + window.env.apiHost);
     window.addEventListener('scroll', this.handleScroll);
-
     api.init();
     if (void 0 !== Cookie.get('token')) {
       api.token = Cookie.get('token');
@@ -68,7 +67,7 @@ class App extends Component<Props, State> {
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
   }
-
+  
   getUserInfo = () => {
     this.setState({ isLoading: true });
     api.getUserInfo().then((res) => {
