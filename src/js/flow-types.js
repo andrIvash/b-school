@@ -20,5 +20,5 @@ export type User = {
   roles: Array<String>,
   sex: String,
   timezone: String,
-} || null
+};
 

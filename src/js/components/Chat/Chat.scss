@@ -1,0 +1,305 @@
+
+// 'Fancy' theme - boilerplate styles for all components, as seen on our demo:
+@import './fancy-example.scss';
+
+.chat__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+}
+
+.chat__title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: rem(60px);
+  align-items: stretch;
+
+  @include tablet {
+    justify-content: flex-start;
+  }
+
+  picture {
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: rem(30px);
+    
+    @include tablet {
+      width: 72px;
+      margin-right: rem(20px);
+    }
+
+    img {
+      height: 60%;
+      max-height: 130px;
+      margin-bottom: rem(20px);
+
+      @include tablet {
+        max-height: 80px;
+      }
+    }
+  }
+
+  .chat__caption {
+    margin-left: rem(15px);
+    @include tablet {
+      margin-left: rem(45px);
+    }
+  }
+}
+
+.chat__caption {
+  font-family: $subtitle-font;
+  font-size: rem(20px);
+  color: $color-dark;
+  line-height: 1.2;
+}
+
+.chat__title-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: rem(15px) rem(40px) rem(45px) rem(60px);
+  font-family: $title-font;
+  font-size: rem(34px);
+  line-height: 1.2;
+  color: $color-dark;
+  @include url('bubble.png');
+  background-size: contain;
+  background-position: left top;
+
+  @include tablet {
+    align-items: flex-start;
+    @include url('bubble-small.png');
+    background-size: contain;
+    background-position: left center;
+    font-size: rem(24px);
+    width: 265px;
+    padding: rem(20px) rem(50px) rem(10px) rem(25px);
+  }
+}
+
+.accordion {
+  border: 0;
+}
+
+.accordion__body {
+  padding: 0;
+}
+
+.acco-parent, .acco-child, .accordion__title {
+  outline: 0;
+}
+
+
+.acco-parent {
+  .accordion__title {
+    background: $color-white;
+    height: rem(88px);
+    margin-bottom: rem(15px);
+    box-shadow: 4px 4px 15px -5px #C4C4C4;
+    font-family: $title-font;
+    font-size: rem(34px);
+    line-height: 1.2;
+    color: $color-dark;
+    padding-left: rem(30px);
+
+    @include phone {
+      height: rem(60px);
+      margin-bottom: rem(10px);
+      padding: rem(10px);
+      padding-left: rem(15px);
+    }
+
+    h3 {
+      font-size: rem(34px);
+    }
+  }
+
+  .accordion__arrow {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 rem(17px) rem(20px);
+    border-color: transparent transparent $color-dark transparent;
+    transition: transform .25s ease;
+    &:before, &:after {
+      display: none !important;
+    }
+  }
+
+  [aria-selected='true'].accordion__title {
+    color: $color-title;
+    margin-bottom: 0;
+  }
+
+  [aria-expanded='true']  .accordion__arrow, [aria-selected='true']  .accordion__arrow {
+    transform: rotate(-180deg);
+    border-color: transparent transparent $color-title transparent;
+  }
+
+}
+
+.acco-child {
+  .accordion__title {
+    font-family: $subtitle-font;
+    line-height: 1.2;
+    color: $color-dark;
+    //box-shadow: none;
+    height: auto;
+    margin-top: -1px;
+
+    h3 {
+      font-family: $subtitle-font;
+      font-size: rem(18px);
+    }
+  }
+  
+  [aria-selected='true'].accordion__title {
+    h3 {
+      color: $color-title;
+    }
+  }
+
+  .accordion__body {
+    background: $color-white;
+    padding: rem(20px);
+    box-shadow: 4px 12px 15px -5px #C4C4C4;
+    margin-top: -1px;
+    margin-bottom: rem(10px);
+    color: $color-dark;
+    font-family: $base-font;
+    font-size: rem(14px);
+    display: flex;
+    justify-content: center;
+  }
+
+  .accordion__body.accordion__body--hidden {
+    display: none;
+  }
+
+  .chat__title {
+    // display: flex;
+    // align-items: flex-start;
+    // justify-content: space-between;
+    // margin-bottom: rem(60px);
+    // align-items: stretch;
+    width: 80%;
+  
+    @include tablet {
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    picture {
+      // width: 130px;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: center;
+      // justify-content: flex-start;
+      // margin-right: rem(30px);
+      
+      @include tablet {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 150px;
+        margin-right: rem(20px);
+      }
+  
+      img {
+        height: 60%;
+        max-height: 130px;
+        margin-bottom: rem(20px);
+  
+        @include tablet {
+          width: 72px;
+          max-height: 80px;
+        }
+      }
+    }
+  
+    .chat__caption {
+      margin-left: rem(15px);
+      @include tablet {
+        margin-left: rem(25px);
+      }
+    }
+  }
+  
+  .chat__caption {
+    font-family: $subtitle-font;
+    font-size: rem(20px);
+    color: $color-dark;
+    line-height: 1.2;
+  }
+  
+  .chat__title-text {
+    // display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    // padding: rem(15px) rem(40px) rem(45px) rem(60px);
+    // font-family: $title-font;
+    // font-size: rem(34px);
+    // line-height: 1.2;
+    font-size: rem(14px);
+    font-family: $base-font;
+    color: $color-dark;
+    width: 100%;
+    @include url('bubble-gray.png');
+    background-size: contain;
+    background-position: left top;
+  
+    @include tablet {
+      font-family: $base-font;
+      font-size: rem(14px);
+      align-items: flex-start;
+      justify-content: flex-start;
+      // @include url('bubble-small.png');
+      // background-size: contain;
+      // background-position: left center;
+      background: $color-white;
+      width: 90%;
+      padding: rem(20px) rem(50px) rem(10px) rem(25px);
+    }
+
+    @include phone {
+      background: $color-white;
+    }
+  } 
+}
+
+.acco-child:first-child {
+  h3 {
+    padding-top: rem(29px);
+
+    &:before {
+      top: rem(20px);
+    }
+  }
+}
+
+.acco-parent [aria-selected='true'].accordion__title + .accordion__body {
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: rem(15px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    @include url('links.png');
+  }
+}
+
+.acco-child [aria-selected='true'].accordion__title + .accordion__body {
+  &:before {
+    display: none;
+  }
+}

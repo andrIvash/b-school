@@ -7,15 +7,18 @@ $color-layout: #EEEEEE;
 $color-layout-dark: #E2DEDE;
 $color-logo: #B72E43;
 $color-logo-dark: #8F121E;
-$color-dark: #070707;
-$color-background: #343A40;
-$color-background-light: #DBD3D8;
+
+$color-dark: #000000;
+$color-title: #7E157C;
+$color-base-backgound: #FAFAFA;
+$color-backlink: #DC98DB;
 $color-white: #fff;
 
 
-$sign-font: 'Lato', sans-serif;
-$base-font: 'Playfair Display', serif;
-
+$title-font: 'Conv_Nefelibata-SansCanvas', sans-serif;
+$subtitle-font: 'Conv_PT_Serif-Web-Bold', sans-serif;
+$base-font: 'Conv_PT_Serif-Web-Regular', serif;
+$link-font: 'Conv_Neucha', arial;
 
 
 // ------------------------------ base styles ---------------------------------//
@@ -26,11 +29,11 @@ html {
   }
 
   @include laptop() {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   @include minilaptop() {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   @include tablet() {
@@ -69,7 +72,7 @@ body {
 }
 
 .container {
-  max-width: rem(800px);
+  max-width: rem(1100px);
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -82,4 +85,54 @@ body {
 .ReactModal__Content {
   width: rem(450px);
   min-height: rem(100px);
+}
+
+.back-top {
+  font-family: $base-font;
+  font-size: rem(12px);
+  opacity: 0;
+  position: fixed;
+  right: 3%;
+  bottom: 45%;
+  padding: rem(5px) rem(10px);
+  border: 2px solid #FBD83F;
+  border-radius: 15%;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+.fadeOutLeft {
+  animation-name: fadeOutLeft;
+}
+
+@media (prefers-reduced-motion) {
+  .animated {
+    animation: unset !important;
+    transition: none !important;
+  }
 }
