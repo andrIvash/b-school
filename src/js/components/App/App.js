@@ -20,7 +20,6 @@ type State = {
 };
 
 type Props = {};
-
 const api = new API();
 
 // modal settings
@@ -173,6 +172,7 @@ class App extends Component<Props, State> {
 	}
 
   render() {
+    const footerStyle = {height: '10px'};
     const { isLoading, modalIsOpen, user } = this.state;
     if (isLoading) {
       return (
@@ -220,7 +220,7 @@ class App extends Component<Props, State> {
           <div className='main' role='main'>
             {this.activeScreen()}
           </div>
-          <footer>footer</footer>
+          <footer style={footerStyle} />
           <button
             className='back-top'
             onClick={this.scrollTop}
