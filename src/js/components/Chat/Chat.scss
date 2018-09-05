@@ -178,6 +178,10 @@
     justify-content: center;
   }
 
+  .accordion__body.accordion__body--hidden {
+    display: none;
+  }
+
   .chat__title {
     // display: flex;
     // align-items: flex-start;
