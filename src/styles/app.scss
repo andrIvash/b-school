@@ -25,7 +25,8 @@
 .page-title {
   font-family: $title-font;
   font-size: rem(60px);
-  color: $color-title
+  color: $color-title;
+  text-transform: uppercase;
 }
 
 .page-title__text {
@@ -47,7 +48,8 @@
 .section__title {
   font-family: $title-font;
   font-size: rem(34px);
-  color: $color-title
+  color: $color-title;
+  text-transform: uppercase;
 }
 
 .section__subtitle {
@@ -60,7 +62,7 @@
   &:before {
     content: "";
     display: block;
-    width: rem(11px);
+    width: rem(22px);
     height: 100%;
     position: absolute;
     top: 0;
@@ -198,6 +200,7 @@
     color: $color-dark;
     padding-bottom: rem(25px);
     position: relative;
+    text-align: center;
 
     &:before {
       content: "";

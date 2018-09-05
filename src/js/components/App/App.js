@@ -121,15 +121,15 @@ class App extends Component<Props, State> {
     let activeComponent = null;
     switch (activeScreen) {
       case 'consultant' : {
-        activeComponent = <Consultant />;
+        activeComponent = <Consultant selectScreen={this.selectScreen} />;
         break;
       }
       case 'bullying' : {
-        activeComponent = <Bullying />;
+        activeComponent = <Bullying selectScreen={this.selectScreen} />;
         break;
       }
       case 'lice': {
-        activeComponent = <Lice />;
+        activeComponent = <Lice selectScreen={this.selectScreen} />;
         break;
       }
       case 'main': {
@@ -137,7 +137,7 @@ class App extends Component<Props, State> {
         break;
       }
       default: {
-        activeComponent = <Main selectScreen={this.selectScreen} />;
+        activeComponent = <Bullying selectScreen={this.selectScreen} />;
       }
     }
     return activeComponent;
