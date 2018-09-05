@@ -69,11 +69,10 @@ body {
 
 .main {
   flex: 1;
-  height: 1200px;
 }
 
 .container {
-  max-width: rem(800px);
+  max-width: rem(1100px);
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -89,12 +88,14 @@ body {
 }
 
 .back-top {
+  font-family: $base-font;
+  font-size: rem(12px);
   opacity: 0;
   position: fixed;
   right: 3%;
   bottom: 45%;
   padding: rem(5px) rem(10px);
-  border: 1px solid green;
+  border: 2px solid #FBD83F;
   border-radius: 15%;
   cursor: pointer;
   z-index: 999;

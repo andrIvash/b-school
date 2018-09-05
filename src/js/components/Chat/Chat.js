@@ -23,20 +23,33 @@ class Chat extends Component<Props, State> {
   }
 
   listQuestions = (list) => list.map(item => (
-    <AccordionItem key={item.id}>
+    <AccordionItem className='acco-child' key={item.id}>
       <AccordionItemTitle>
-        <h3>
+        <h3 className='sectionList-elem'>
           {item.question}
         </h3>
       </AccordionItemTitle>
       <AccordionItemBody>
-        {item.answer}
+        <div className='chat__title'>
+          <picture>
+            <img
+              alt='Паранит'
+              src={`${window.env.apiHost}/images/paranit.png`}
+            />
+            <div className='chat__caption'>
+              Принц Паранит
+            </div>
+          </picture>
+          <div className='chat__title-text'>
+            {item.answer}
+          </div>
+        </div>
       </AccordionItemBody>
     </AccordionItem>
   ))
 
   listTopics = () => this.state.data.map(item => (
-    <AccordionItem key={item.id} uuid={item.id}>
+    <AccordionItem className='acco-parent' key={item.id} uuid={item.id}>
       <AccordionItemTitle>
         <h3 className='u-position-relative'>
           {item.title}
@@ -54,6 +67,20 @@ class Chat extends Component<Props, State> {
   render() {
     return (
       <div className='chat'>
+        <div className='chat__title'>
+          <picture>
+            <img
+              alt='Паранит'
+              src={`${window.env.apiHost}/images/paranit.png`}
+            />
+            <div className='chat__caption'>
+              Принц Паранит
+            </div>
+          </picture>
+          <div className='chat__title-text'>
+            Выберите интересущий вас вопрос из списка, и я отвечу на него!
+          </div>
+        </div>
         <Accordion accordion={true}>
           {this.listTopics()}
         </Accordion>

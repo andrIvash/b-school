@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+import Chat from '../Chat/Chat';
 
 type Props = {
   selectScreen: (evt: EventTarget) => void,
@@ -40,22 +41,22 @@ const Main = (props: Props) => (
           </section>
         </article>
         <ul className='sectionList'>
-          <li className='sectionList__elem'>
+          <li className='sectionList-elem'>
             list text
           </li>
-          <li className='sectionList__elem'>
+          <li className='sectionList-elem'>
             list text
           </li>
-          <li className='sectionList__elem'>
+          <li className='sectionList-elem'>
             list text
           </li>
-          <li className='sectionList__elem'>
+          <li className='sectionList-elem'>
             list text
           </li>
         </ul>
 
         <ul className='sectionList sectionList--foto'>
-          <li className='sectionList__elem'>
+          <li className='sectionList-elem'>
             <picture>
               <img
                 alt='Паранит'
@@ -66,7 +67,7 @@ const Main = (props: Props) => (
               text
             </p>
           </li>
-          <li className='sectionList__elem'>
+          <li className='sectionList_-elem'>
             <picture>
               <img
                 alt='Паранит'
@@ -77,7 +78,7 @@ const Main = (props: Props) => (
               text
             </p>
           </li>
-          <li className='sectionList__elem'>
+          <li className='sectionList-elem'>
             <picture>
               <img
                 alt='Паранит'
@@ -88,7 +89,7 @@ const Main = (props: Props) => (
               text text text text text text text text text text text text text text text text text text 
             </p>
           </li>
-          <li className='sectionList__elem'>
+          <li className='sectionList-elem'>
             <picture>
               <img
                 alt='Паранит'
@@ -121,6 +122,7 @@ const Main = (props: Props) => (
             </li>
           </ul>
         </section>
+        <Chat />
       </div>
     </div>
   </div>

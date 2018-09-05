@@ -100,7 +100,7 @@
   align-items: flex-start;
 }
 
-.sectionList__elem {
+.sectionList-elem {
   width: 47%;
   padding-left: rem(40px);
   position: relative;
@@ -127,7 +127,7 @@
 
 .sectionList--foto {
 
-  .sectionList__elem {
+  .sectionList-elem {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -212,7 +212,7 @@
       @include url('dots.svg');
     }
   }
-  
+
   .sectionFoto__elem:last-child {
     &:before {
       display: none;
