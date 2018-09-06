@@ -66,7 +66,7 @@ class App extends Component<Props, State> {
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
   }
-  
+
   getUserInfo = () => {
     this.setState({ isLoading: true });
     api.getUserInfo().then((res) => {
