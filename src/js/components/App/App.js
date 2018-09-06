@@ -137,7 +137,7 @@ class App extends Component<Props, State> {
         break;
       }
       default: {
-        activeComponent = <Bullying selectScreen={this.selectScreen} />;
+        activeComponent = <Main selectScreen={this.selectScreen} />;
       }
     }
     return activeComponent;
@@ -182,7 +182,7 @@ class App extends Component<Props, State> {
             <main className='main'>
               Loading ...
             </main>
-            <footer>footer</footer>
+            <footer style={footerStyle} />
           </ErrorBoundary>
         </div>
       );

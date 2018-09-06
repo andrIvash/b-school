@@ -75,7 +75,24 @@
     text-transform: initial;
 
     @include phone {
-      width: 80%;
+      width: 70%;
     }
+  }
+}
+
+.bullying {
+  @include url('half-paper.png');
+  background-position: 50% 900px;
+
+  @include laptop {
+    background-position: 50% 820px;
+  }
+
+  @include tablet {
+    background-position: 50% 680px;
+  }
+
+  @include phone {
+    background-position: 50% 1350px;
   }
 }
