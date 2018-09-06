@@ -1,0 +1,119 @@
+.lice {
+  .lice-article {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: rem(100px);
+  }
+
+  .section__subtitle.section__subtitle--lice {
+    width: 100%;
+    text-transform: uppercase;
+    color: $color-dark;
+    font-size: rem(40px);
+    font-family: $title-font;
+    margin-bottom: rem(40px);
+
+    &:before {
+      background-size: contain;
+    }
+  }
+
+  .sectionFoto {
+    width: 40%;
+  }
+
+  @include phone() {
+    .lice-article {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: rem(80px);
+    }
+    .sectionFoto {
+      width: 80%;
+      margin-bottom: rem(50px);
+      picture {
+        margin-bottom: rem(25px);
+      }
+    }
+  }
+
+  .sectionList.sectionList--lice {
+    margin-bottom: rem(120px);
+  }
+}
+
+
+.lice .lice__container.title-container {
+  width: rem(500px);
+  height: rem(195px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: rem(50px);
+  margin-bottom: rem(120px);
+  background: transparent;
+  font-size: rem(60px);
+
+  .page-title {
+    line-height: 1.2;
+    margin-bottom: rem(50px);
+    text-align: center;
+    font-size: rem(60px);
+    @include phone() {
+      font-size: rem(38px);
+      width: 80%;
+    }
+
+  }
+
+  .page-title__text {
+    font-size: rem(18px);
+    text-align: center;
+    text-transform: initial;
+
+    @include phone {
+      width: 70%;
+    }
+  }
+}
+
+.lice .lice__container.title-container.lice__container--wider {
+  width: rem(700px);
+  margin-bottom: rem(80px);
+
+  @include laptop {
+    margin-bottom: rem(10px);
+  }
+}
+
+.lice {
+  background-image: url('../images/full-paper.png'), url('../images/full-paper2.png');
+  background-position: 50% 250px, 50% 1700px;
+  background-size: contain, contain;
+  background-repeat: no-repeat, no-repeat;
+  
+  
+  
+  @include laptop {
+    .lice__container.title-container .page-title {
+      margin-bottom: rem(10px);
+    }
+    .sectionList-elem {
+      margin-bottom: rem(15px);
+    }
+    background-position: 50% 280px, 50% 1450px;
+  }
+
+  @include tablet {
+    background-position: 50% 180px, 50% 1460px;
+    background-size: auto, contain;
+  }
+
+  @include phone {
+    background-position: 50% 130px, 50% 1660px;
+    background-size: auto, 240%;
+  }
+}

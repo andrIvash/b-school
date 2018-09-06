@@ -1,0 +1,98 @@
+.bullying {
+  .bullying-article {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: rem(100px);
+  }
+  
+  .sectionFoto {
+    width: 30%;
+  }
+
+  @include phone() {
+    .bullying-article {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: rem(80px);
+    }
+    .sectionFoto {
+      width: 80%;
+      margin-bottom: rem(50px);
+      picture {
+        margin-bottom: rem(25px);
+      }
+    }
+  }
+
+  .section__subtitle.section__subtitle--bullying {
+    width: 100%;
+    text-transform: uppercase;
+    color: $color-dark;
+    font-size: rem(40px);
+    font-family: $title-font;
+    margin-bottom: rem(40px);
+
+    &:before {
+      background-size: contain;
+    }
+  }
+
+  .sectionList.sectionList--bullying {
+    margin-bottom: rem(120px);
+  }
+
+}
+
+.bullying .bullying__container.title-container {
+  width: rem(780px);
+  height: rem(195px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: rem(50px);
+  margin-bottom: rem(120px);
+  background: transparent;
+  font-size: rem(60px);
+
+  .page-title {
+    line-height: 1.2;
+    margin-bottom: rem(50px);
+    text-align: center;
+    font-size: rem(60px);
+    @include phone() {
+      font-size: rem(38px);
+      width: 80%;
+    }
+
+  }
+
+  .page-title__text {
+    font-size: rem(18px);
+    text-align: center;
+    text-transform: initial;
+
+    @include phone {
+      width: 70%;
+    }
+  }
+}
+
+.bullying {
+  @include url('half-paper.png');
+  background-position: 50% 900px;
+
+  @include laptop {
+    background-position: 50% 820px;
+  }
+
+  @include tablet {
+    background-position: 50% 680px;
+  }
+
+  @include phone {
+    background-position: 50% 1350px;
+  }
+}

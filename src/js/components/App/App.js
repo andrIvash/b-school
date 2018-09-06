@@ -20,7 +20,6 @@ type State = {
 };
 
 type Props = {};
-
 const api = new API();
 
 // modal settings
@@ -122,15 +121,15 @@ class App extends Component<Props, State> {
     let activeComponent = null;
     switch (activeScreen) {
       case 'consultant' : {
-        activeComponent = <Consultant />;
+        activeComponent = <Consultant selectScreen={this.selectScreen} />;
         break;
       }
       case 'bullying' : {
-        activeComponent = <Bullying />;
+        activeComponent = <Bullying selectScreen={this.selectScreen} />;
         break;
       }
       case 'lice': {
-        activeComponent = <Lice />;
+        activeComponent = <Lice selectScreen={this.selectScreen} />;
         break;
       }
       case 'main': {
@@ -173,6 +172,7 @@ class App extends Component<Props, State> {
 	}
 
   render() {
+    const footerStyle = {height: '10px'};
     const { isLoading, modalIsOpen, user } = this.state;
     if (isLoading) {
       return (
@@ -182,7 +182,7 @@ class App extends Component<Props, State> {
             <main className='main'>
               Loading ...
             </main>
-            <footer>footer</footer>
+            <footer style={footerStyle} />
           </ErrorBoundary>
         </div>
       );
@@ -220,7 +220,7 @@ class App extends Component<Props, State> {
           <div className='main' role='main'>
             {this.activeScreen()}
           </div>
-          <footer>footer</footer>
+          <footer style={footerStyle} />
           <button
             className='back-top'
             onClick={this.scrollTop}

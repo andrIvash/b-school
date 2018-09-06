@@ -10,119 +10,101 @@ type Props = {
 const Main = (props: Props) => (
   <div className='main'>
     <div className='container'>
-      <h1 className='page-title'>
-        title
-      </h1>
-      <p className='page-title__text'>title text</p>
+      <div className='title-container'>
+        <h1 className='page-title'>
+          Буллинг в школе:
+        </h1>
+        <p className='page-title__text'>причины и последствия</p>
+      </div>
       <div className='content'>
-        <article className='article'>
+        <article className='article article--top'>
           <section className='section'>
-            <h4 className='section__title'>Heading</h4>
-            <div className='section__subtitle'>subtitle</div>
-            <p className='section__text'>text</p>
+            <h4 className='section__title'>интерактивный консультант</h4>
+            <div className='section__subtitle'>Что такое буллинг и как помочь ребенку?</div>
+            <p className='section__text'>
+              Почему дети травят друг друга? Какие дети больше других подвержены травле?
+              Что делать, если у ребенка вши? На эти и другие вопросы отвечает интерактивный
+              консультант!
+            </p>
             <a
               className='section__link'
-              data-screen='main'
+              data-screen='consultant'
               href='/'
               onClick={(evt) => props.selectScreen(evt)}
-              title='Лого'
+              title='Задать вопрос'
               >
-              link
+              Задать вопрос
             </a>
           </section>
-          <section className='section'>
-            <picture>
+          <section className='section section--foto'>
+            <picture className='picture picture-right'>
               <img
-                alt='Паранит'
+                alt='Консультант'
                 data-screen='main'
-                src={`${window.env.apiHost}/images/LOGO.png`}
+                src={`${window.env.apiHost}/images/img1.png`}
               />
             </picture>
           </section>
         </article>
-        <ul className='sectionList'>
-          <li className='sectionList-elem'>
-            list text
-          </li>
-          <li className='sectionList-elem'>
-            list text
-          </li>
-          <li className='sectionList-elem'>
-            list text
-          </li>
-          <li className='sectionList-elem'>
-            list text
-          </li>
-        </ul>
 
-        <ul className='sectionList sectionList--foto'>
-          <li className='sectionList-elem'>
-            <picture>
+        <article className='article'>
+          <section className='section section--foto'>
+            <picture className='picture picture-right'>
               <img
-                alt='Паранит'
-                src={`${window.env.apiHost}/images/icon1.png`}
+                alt='Буллинг'
+                data-screen='main'
+                src={`${window.env.apiHost}/images/img2.png`}
               />
             </picture>
-            <p>
-              text
+          </section>
+          <section className='section'>
+            <h4 className='section__title'>инфографика</h4>
+            <div className='section__subtitle'>Как понять, что ребенка травят в школе и каковы причины буллинга?</div>
+            <p className='section__text'>
+            Буллинг – страшная реалия современной школы. Последствия у травли могут быть
+            самые печальные. Как определить, что вашему ребенку нужна помощь?
             </p>
-          </li>
-          <li className='sectionList_-elem'>
-            <picture>
-              <img
-                alt='Паранит'
-                src={`${window.env.apiHost}/images/icon1.png`}
-              />
-            </picture>
-            <p>
-              text
-            </p>
-          </li>
-          <li className='sectionList-elem'>
-            <picture>
-              <img
-                alt='Паранит'
-                src={`${window.env.apiHost}/images/icon1.png`}
-              />
-            </picture>
-            <p>
-              text text text text text text text text text text text text text text text text text text 
-            </p>
-          </li>
-          <li className='sectionList-elem'>
-            <picture>
-              <img
-                alt='Паранит'
-                src={`${window.env.apiHost}/images/icon1.png`}
-              />
-            </picture>
-            <p>
-              text
-            </p>
-          </li>
-          
-        </ul>
+            <a
+              className='section__link'
+              data-screen='bullying'
+              href='/'
+              onClick={(evt) => props.selectScreen(evt)}
+              title='Смотреть'
+              >
+              Смотреть
+            </a>
+          </section>
+        </article>
 
-        <section className='sectionFoto'>
-          <picture>
-            <img
-              alt='Паранит'
-              src={`${window.env.apiHost}/images/icon1.png`}
-            />
-          </picture>
-          <ul className='sectionFoto__sublist'>
-            <li className='sectionFoto__elem'>
-              list text
-            </li>
-            <li className='sectionFoto__elem'>
-              list text
-            </li>
-            <li className='sectionFoto__elem'>
-              list text
-            </li>
-          </ul>
-        </section>
-        <Chat />
+        <article className='article article--bottom'>
+          <section className='section'>
+            <h4 className='section__title'>инфографика</h4>
+            <div className='section__subtitle'>Как защитить себя и ребенка от вшей?</div>
+            <p className='section__text'>
+            Лето и первый месяц после каникул — период вспышек педикулеза и повышенного
+             риска заражения. Какие меры безопасности следует соблюдать и как действовать
+             в случае заражения?
+            </p>
+            <a
+              className='section__link'
+              data-screen='lice'
+              href='/'
+              onClick={(evt) => props.selectScreen(evt)}
+              title='Смотреть'
+              >
+              Смотреть
+            </a>
+          </section>
+          <section className='section section--foto'>
+            <picture className='picture picture-right'>
+              <img
+                alt='Вши'
+                data-screen='main'
+                src={`${window.env.apiHost}/images/img3.png`}
+              />
+            </picture>
+          </section>
+        </article>
       </div>
     </div>
   </div>
