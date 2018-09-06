@@ -117,3 +117,203 @@
     background-size: auto, 240%;
   }
 }
+
+.lice {
+  .d-catalog-scheme { margin-bottom: rem(-110px); font-family: $link-font,sans-serif; color:$color-dark; }
+  .d-catalog-scheme-i { 
+    position: relative;
+    width: rem(1090px);
+    height: rem(491px);
+    @include url('bg_catalog_scheme.png');
+  }
+  .d-catalog-scheme .area { position: absolute; font-size: rem(26px); line-height: 1; text-align: center; }
+  .d-catalog-scheme .area-0 { top: rem(60px); left: rem(245px); width: rem(568px); font-size: rem(30px); }
+  .d-catalog-scheme .area-1 { top: rem(185px); left: rem(25px); width: rem(300px); }
+  .d-catalog-scheme .area-2 { top: rem(180px); left: rem(395px); width: rem(280px); }
+  .d-catalog-scheme .area-3 { top: rem(180px); left: rem(780px); width: rem(310px); }
+  .d-catalog-scheme .area-4 { top: rem(290px); left: rem(125px); width: rem(300px); }
+  .d-catalog-scheme .area-5 { top: rem(290px); left: rem(635px); width: rem(325px); }
+
+  .catalog-item .item-label-sect { 
+    background: none !important;
+    font-size: rem(26px);
+    line-height: 70px;
+    font-family: $link-font, sans-serif; 
+    color: $color-dark;
+    white-space: nowrap;
+  }
+  .catalog-item .label-spray { padding-right: 55px; }
+
+  .catalog-items { 
+    display: flex;
+    justify-content: flex-start;
+    margin-top: rem(25px);
+    margin-bottom: rem(80px);
+  }
+  .catalog-item { 
+    position: relative;
+  }
+  .catalog-item .img { 
+    display: block;
+    position: relative;
+    width: rem(243px);
+    height: rem(530px);
+    @include url('bg-item.png');
+    background-position: 0 0;
+    text-align: center;
+    
+  };
+  .catalog-item .img i { position: absolute; bottom: rem(60px); left: rem(45px); right: rem(38px); height: rem(380px); line-height: rem(380px); }
+  .catalog-item .img i img { display: inline-block; vertical-align: bottom; max-width: 100%; max-height: 100%; }
+  .catalog-item .item-label-sect { 
+    top: rem(28px);
+    position: relative; 
+    height: rem(60px);
+    background-position: 70% 50%;
+    line-height: 1;
+  }
+  .catalog-item .caption {
+    text-align: center;
+    display: block;
+    margin: 0 0 0 10px;
+    padding-left: rem(15px);
+    font-size: rem(16px);
+    font-family: $link-font, sans-serif; 
+    color: $color-title;
+  }
+
+  .big-view {
+    @include tablet {
+      display: none;
+    }
+  }
+  .small-view {
+    display: none ;
+    
+    @include tablet {
+      display: block;
+    }
+  }
+
+  .d-catalog-scheme-xs { margin: 0 auto; width: 320px; font-family: $link-font, sans-serif;  color:$color-dark; }
+	.d-catalog-scheme-xs .area { display: block; margin-bottom: 10px; background-position: 50% 50%; background-repeat: no-repeat; font-size: 22px; line-height: 1; text-align: center; }
+	.d-catalog-scheme-xs .area span { display: block; margin-top: 5px; font-size: 18px; }
+	.d-catalog-scheme-xs .area-0 {
+    margin-bottom: 25px;
+    height: 157px;
+    @include url('bg_cat_cl_0.png');
+    font-size: 26px; }
+	.d-catalog-scheme-xs .area-1 { 
+    height: 113px;
+    @include url('bg_cat_cl_1.png');
+  }
+	.d-catalog-scheme-xs .area-2 {
+    height: 113px;
+    @include url('bg_cat_cl_1.png'); 
+  }
+	.d-catalog-scheme-xs .area-3 {
+    height: 110px;
+    @include url('bg_cat_cl_2.png'); 
+  }
+  .d-catalog-scheme-xs
+  .area-4 {
+    height: 94px;
+    @include url('bg_cat_cl_3.png');
+  }
+	.d-catalog-scheme-xs .area-0 div { padding: 50px 0 0; }
+	.d-catalog-scheme-xs .area-1 div { padding: 25px 45px 0; }
+	.d-catalog-scheme-xs .area-2 div { padding: 25px 45px 0; }
+	.d-catalog-scheme-xs .area-3 div { padding: 22px 45px 0; }
+  .d-catalog-scheme-xs .area-4 div { padding: 25px 35px 0; }
+  
+  .d-catalog-scheme-items { display: table; table-layout: fixed; margin-bottom: 45px; width: 100%; text-align: center; }
+	.d-catalog-scheme-items .d-cell-item { display: table-cell; vertical-align: top; font-size: 22px; line-height: 1.25; font-family: $link-font, sans-serif; }
+	.d-catalog-scheme-items .d-cell-item a { display: inline; border-bottom: 1px solid rgba(37,37,37,.2); color:$color-dark; text-decoration: none; }
+	.d-catalog-scheme-items .d-cell-item a:hover { border: 0; }
+	.d-catalog-scheme-items .d-cell-item i { display: block; position: relative; margin: 0 auto 10px; width: 48px; height: 48px; border: 2px dotted; border-radius: 100%; }
+	.d-catalog-scheme-items .d-cell-item i:before { position: absolute; top: 0; left: -1px; right: 4px; bottom: 4px; @include url('1_52.png'); content: '.'; text-indent: -9999px; overflow: hidden; }
+	.d-catalog-scheme-items .d-cell-item i.ico-spray { border-color: #b33d73; }
+	.d-catalog-scheme-items .d-cell-item i.ico-shampoo { border-color: #0e747b; }
+	.d-catalog-scheme-items .d-cell-item i.ico-losion { border-color: #08435c; }
+	.d-catalog-scheme-items .d-cell-item i.ico-sens { border-color: #3faac8; }
+	.d-catalog-scheme-items .d-cell-item i.ico-spray:before { top: 8px; background-position: 0 0; }
+	.d-catalog-scheme-items .d-cell-item i.ico-shampoo:before { background-position: -5px -162px; }
+	.d-catalog-scheme-items .d-cell-item i.ico-losion:before { background-position: -5px -113px; }
+  .d-catalog-scheme-items .d-cell-item i.ico-sens:before { background-position: -6px -226px; }
+  
+  .catalog-items.small-view {
+    width: 90%;
+    .catalog-item {
+      margin-bottom: rem(30px);
+      padding-right: rem(40px);
+      position: relative;
+    }
+    .catalog-item {
+      &:before {
+        content: "";
+        display: block;
+        width: rem(40px);
+        height: rem(50px);
+        position: absolute;
+        top: 0;
+        right: rem(40px);
+      }
+    }
+    .catalog-item:nth-child(1) {
+      &:before {
+        @include url('1_52.png');
+        background-position: 0 -150px;
+      }
+    }
+    .catalog-item:nth-child(2) {
+      &:before {
+        @include url('1_52.png');
+        background-position: 0 -110px;
+      }
+    }
+    .catalog-item:nth-child(3) {
+      &:before {
+        @include url('1_52.png');
+        background-position: 0 0px;
+      }
+    }
+    .catalog-item:nth-child(4) {
+      &:before {
+        @include url('1_52.png');
+      }
+    }
+    .catalog-item:nth-child(5) {
+      &:before {
+        @include url('label-kond.png');
+        background-size: contain;
+      }
+    }
+    .item-label {
+      margin-bottom: rem(5px);
+      line-height: 1.25;
+      font-family: $link-font, sans-serif;
+      color: $color-dark;
+      font-size: rem(30px);
+    }
+    .caption {
+      line-height: 1.25;
+      font-size: rem(21px);
+      font-family: $link-font, sans-serif;
+      color: $color-dark;
+      text-align: left;
+      padding-top: rem(5px);
+      padding-bottom: rem(5px);
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        width: rem(12px);
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include url('lines.png');
+      }
+    }
+  }
+}

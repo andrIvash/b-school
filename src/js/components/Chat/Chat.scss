@@ -169,7 +169,6 @@
     font-family: $subtitle-font;
     line-height: 1.2;
     color: $color-dark;
-    //box-shadow: none;
     height: auto;
     margin-top: -1px;
 
@@ -203,11 +202,7 @@
   }
 
   .chat__title {
-    // display: flex;
-    // align-items: flex-start;
-    // justify-content: space-between;
-    // margin-bottom: rem(60px);
-    // align-items: stretch;
+   
     width: 80%;
   
     @include tablet {
@@ -217,12 +212,6 @@
     }
   
     picture {
-      // width: 130px;
-      // display: flex;
-      // flex-direction: column;
-      // align-items: center;
-      // justify-content: flex-start;
-      // margin-right: rem(30px);
       
       @include tablet {
         flex-direction: row;
@@ -258,13 +247,8 @@
   }
   
   .chat__title-text {
-    // display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    // padding: rem(15px) rem(40px) rem(45px) rem(60px);
-    // font-family: $title-font;
-    // font-size: rem(34px);
-    // line-height: 1.2;
     font-size: rem(14px);
     font-family: $base-font;
     color: $color-dark;
@@ -278,9 +262,6 @@
       font-size: rem(14px);
       align-items: flex-start;
       justify-content: flex-start;
-      // @include url('bubble-small.png');
-      // background-size: contain;
-      // background-position: left center;
       background: $color-white;
       width: 90%;
       padding: rem(20px) rem(50px) rem(10px) rem(25px);
