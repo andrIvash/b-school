@@ -2,7 +2,11 @@
 
 import React from 'react';
 
-const Bullying = () => (
+type Props = {
+  selectScreen: (evt: EventTarget) => void,
+};
+
+const Bullying = (props: Props) => (
   <div className='bullying'>
     <div className='container'>
       <div className='title-container bullying__container'>
@@ -215,6 +219,18 @@ const Bullying = () => (
           </p>
         </li>
       </ul>
+      <div className='question'>
+        Остались вопросы? Ответит интерактивный консультант.
+        <a
+          className='section__link'
+          data-screen='consultant'
+          href='/'
+          onClick={(evt) => props.selectScreen(evt)}
+          title='Задать вопрос'
+          >
+          Задать вопрос
+        </a>
+      </div>
     </div>
   </div>
 );

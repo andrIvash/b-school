@@ -72,9 +72,7 @@ class App extends Component<Props, State> {
     api.getUserInfo().then((res) => {
       setTimeout(() => {
         this.setState({ isLoading: false });
-        console.log('res__', res);
         const roles = api.getData().user.roles;
-        console.log(this.isEdu(roles), this.isParent(roles));
         if (this.isEdu(roles) || this.isParent(roles)) {
           console.log('welcome !');
           this.setState({ user: res });
@@ -172,7 +170,7 @@ class App extends Component<Props, State> {
 	}
 
   render() {
-    const footerStyle = {height: '10px'};
+    const footerStyle = {height: '50px'};
     const { isLoading, modalIsOpen, user } = this.state;
     if (isLoading) {
       return (
@@ -221,6 +219,7 @@ class App extends Component<Props, State> {
             {this.activeScreen()}
           </div>
           <footer style={footerStyle} />
+          <div className='banner'>Имеются противопоказания, перед применением необходимо ознакомиться с инструкцией</div>
           <button
             className='back-top'
             onClick={this.scrollTop}

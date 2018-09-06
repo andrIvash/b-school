@@ -231,3 +231,33 @@
   margin-bottom: rem(20px) !important;
 }
 
+.question {
+  font-family: $subtitle-font;
+  color: $color-dark;
+  font-size: rem(24px);
+  line-height: 1.2;
+  margin-bottom: rem(80px);
+
+  .section__link {
+    font-size: rem(19px);
+  }
+}
+
+.question--link {
+  margin-bottom: rem(80px);
+  .section__link {
+    font-size: rem(30px);
+  }
+}
+.banner {
+  z-index: 888;
+  position: fixed;
+  background-color: rgba(126, 21, 124, 0.3);
+  bottom: 0;
+  padding: rem(10px) rem(10px);
+  font-family: $base-font;
+  font-size: rem(18px);
+  line-height: 1.2;
+  text-align: center;
+  width: 100%;
+}
