@@ -80,7 +80,7 @@ const config = {
       window: {
         env: {
           //apiHost: 'http://localhost:3000',
-          apiHost: 'https://andrivash.github.io/b-school',
+          apiHost: 'https://andrivash.github.io/b-school/assets',
         },
       },
     }),
