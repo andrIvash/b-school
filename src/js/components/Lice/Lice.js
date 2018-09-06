@@ -2,7 +2,11 @@
 
 import React from 'react';
 
-const Lice = () => (
+type Props = {
+  selectScreen: (evt: EventTarget) => void,
+};
+
+const Lice = (props: Props) => (
   <div className='lice'>
     <div className='container'>
 
@@ -181,6 +185,139 @@ const Lice = () => (
         </p>
       </div>
 
+      <div className='d-catalog-scheme d-catalog-scheme-i big-view'>
+        <span className='area area-0'>Для кого предназначено средство?</span>
+        <span className='area area-1'>Для беременных и кормящих и детей с 1 года</span>
+        <span className='area area-2'>Для девочек с 3-х лет</span>
+        <span className='area area-3'>Для мальчиков с 3-х лет</span>
+        <span className='area area-4'>С длинными и густыми волосами</span>
+        <span className='area area-5'>С короткими или средней длинны волосами</span>
+      </div>
+
+      <div className='catalog-items big-view'>
+        <div className='catalog-item'>
+          <span className='img'>
+            <span className='item-label-sect label-sens d-hide-xs'>Паранит Сенситив</span>
+            <i><img src={`${window.env.apiHost}/images/04.jpg`} alt='Паранит Сенситив' /></i>
+          </span>
+          <span className='caption'>
+            <span>Без вычёсывания</span>
+          </span>
+        </div>
+        <div className='catalog-item'>
+          <span className='img'>
+            <span className='item-label-sect label-shampoo d-hide-xs'>Паранит Шампунь</span>
+            <i><img src={`${window.env.apiHost}/images/site_product_01 (1).png`} alt='Паранит Шампунь'/></i>
+          </span>
+          <span className='caption'>
+            <span>Просто, как вымыть голову</span>
+          </span>
+        </div>
+        <div className='catalog-item'>
+          <span className='img'>
+            <span className='item-label-sect label-spray d-hide-xs'>Паранит Спрей</span>
+            <i><img src={`${window.env.apiHost}/images/site_product_01 (2).png`} alt='Паранит Спрей'/></i>
+          </span>
+          <span className='caption'>
+            <span>Быстро: обработка за 15 минут</span>
+          </span>
+        </div>
+        <div className='catalog-item'>
+          <span className='img'>
+            <span className='item-label-sect label-losion d-hide-xs'>Паранит Лосьон</span>
+            <i><img src={`${window.env.apiHost}/images/site_product_01 (3).png`} alt='Паранит Лосьон' /></i>
+          </span>
+          <span className='caption'>
+            <span>Недорого и эффективно</span>
+          </span>
+        </div>
+        <div className='catalog-item'>
+          <span className='img'>
+            <span className='item-label-sect d-hide-xs'>Паранит Кондиционер</span>
+            <i><img src={`${window.env.apiHost}/images/kond_1.png`} alt='Шампунь-Кондиционер . Уход после обработки.'/></i>
+          </span>
+          <span className='caption'>
+            <span>Легко смывает спрей и лосьон</span>
+          </span>
+        </div>
+      </div>
+
+      <div className='d-catalog-scheme-xs d-show-xs small-view'>
+        <div className='area area-0'><div>Для кого предназначено средство?</div></div>
+        <div className='area area-1'><div>Для девочек с 3-х лет <span>С короткими или средней длинны волосами</span></div></div>
+        <div className='d-catalog-scheme-items'>
+          <div className='d-cell-item'>
+            <div ><i className='ico-spray' />ПАРАНИТ Спрей</div>
+          </div>
+          <div className='d-cell-item'>
+            <div ><i className='ico-shampoo' />ПАРАНИТ Шампунь</div>
+          </div>
+          <div className='d-cell-item'>
+            <div><i className='ico-losion' />ПАРАНИТ Лосьон</div>
+          </div>
+        </div>
+        <div className='area area-2'><div>Для девочек с 3-х лет <span>С длинными и густыми волосами</span></div></div>
+        <div className='d-catalog-scheme-items'>
+          <div className='d-cell-item'>
+            <div><i className='ico-sens' />ПАРАНИТ Сенситив</div>
+          </div>
+        </div>
+        <div className='area area-3'><div>Для мальчиков с 3-х лет <span>С короткими или средней длинны волосами</span></div></div>
+        <div className='d-catalog-scheme-items'>
+          <div className='d-cell-item'>
+            <div ><i className='ico-spray' />ПАРАНИТ Спрей</div>
+          </div>
+          <div className='d-cell-item'>
+            <div ><i className='ico-shampoo' />ПАРАНИТ Шампунь</div>
+          </div>
+          <div className='d-cell-item'>
+            <div ><i className='ico-losion' />ПАРАНИТ Лосьон</div>
+          </div>
+        </div>
+        <div className='area area-4'><div>Для беременных и кормящих и детей с 1 года</div></div>
+        <div className='d-catalog-scheme-items'>
+          <div className='d-cell-item'>
+            <div ><i className='ico-sens' />ПАРАНИТ Сенситив</div>
+          </div>
+        </div>
+      </div>
+      <div className='catalog-items small-view'>
+        <div className='catalog-item'>
+          <span className='item-label'>Паранит Сенситив</span>
+          <span className='caption'>Без вычёсывания</span>
+        </div>
+        <div className='catalog-item'>
+          <span className='item-label'>Паранит Шампунь</span>
+          <span className='caption'>Просто, как вымыть голову</span>
+        </div>
+        <div className='catalog-item'>
+          <span className='item-label'>Паранит Спрей</span>
+          <span className='caption'>Быстро: обработка за 15 минут</span>
+        </div>
+        <div className='catalog-item'>
+          <span className='item-label'>Паранит Лосьон</span>
+          <span className='caption'>Недорого и эффективно</span>
+        </div>
+        <div className='catalog-item'>
+          <span className='item-label'>Паранит Кондиционер</span>
+          <span className='caption'>Легко смывает спрей и лосьон</span>
+        </div>
+      </div>
+
+      <div className='question--link'>
+        <a
+          className='section__link'
+          data-screen='consultant'
+          href='http://vsham.net/?utm_source=dnevnik&utm_medium=article'
+          onClick={()=> {
+            gtag('event', 'Кнопка Клик', { 'event_category': 'Кнопка', 'event_action': 'Клик', });
+          }}
+          
+          title='Узнать больше'
+          >
+          Узнать больше
+        </a>
+      </div>
     </div>
   </div>
 );
