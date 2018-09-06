@@ -79,7 +79,8 @@ const config = {
       title: 'My App',
       window: {
         env: {
-          apiHost: 'http://localhost:3000',
+          //apiHost: 'http://localhost:3000',
+          apiHost: 'https://andrivash.github.io/b-school',
         },
       },
     }),
