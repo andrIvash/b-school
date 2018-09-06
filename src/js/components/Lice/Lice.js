@@ -180,7 +180,61 @@ const Lice = () => (
           Чтобы правильно подобрать средство от вшей, ответьте на несколько простых вопросов
         </p>
       </div>
-
+      <div className='d-catalog-scheme d-catalog-scheme-i'>
+        <span className='area area-0'>Для кого предназначено средство?</span>
+        <span className='area area-1'>Для беременных и кормящих и детей с 1 года</span>
+        <span className='area area-2'>Для девочек с 3-х лет</span>
+        <span className='area area-3'>Для мальчиков с 3-х лет</span>
+        <span className='area area-4'>С длинными и густыми волосами</span>
+        <span className='area area-5'>С короткими или средней длинны волосами</span>
+      </div>
+      <div className='catalog-items'>
+        <a href='/catalog/sens/' className='catalog-item' id='bx_3218110189_53'>
+          <span className='img'>
+            <span className='item-label-sect label-sens d-hide-xs'>Паранит Сенситив</span>
+            <i><img src={`${window.env.apiHost}/images/04.jpg`} alt='Паранит Сенситив' /></i>
+                </span>
+          <span className='caption'>
+            <span>Без вычёсывания</span>
+          </span>
+        </a>
+        <a href='/catalog/shampoo/' className='catalog-item' id='bx_3218110189_54'>
+          <span className='img'>
+            <span className='item-label-sect label-shampoo d-hide-xs'>Паранит Шампунь</span>
+            <i><img src={`${window.env.apiHost}/images/site_product_01 (1).png`} alt='Паранит Шампунь'/></i>
+            </span>
+          <span className='caption'>
+            <span>Просто, как вымыть голову</span>
+          </span>
+        </a>
+        <a href='/catalog/spray/' className='catalog-item' id='bx_3218110189_55'>
+          <span className='img'>
+            <span className='item-label-sect label-spray d-hide-xs'>Паранит Спрей</span>
+            <i><img src={`${window.env.apiHost}/images/site_product_01 (2).png`} alt='Паранит Спрей'/></i>
+          </span>
+          <span className='caption'>
+            <span>Быстро: обработка за 15 минут</span>
+          </span>
+        </a>
+        <a href='/catalog/losion/' className='catalog-item' id='bx_3218110189_56'>
+          <span className='img'>
+            <span className='item-label-sect label-losion d-hide-xs'>Паранит Лосьон</span>
+              <i><img src={`${window.env.apiHost}/images/site_product_01 (3).png`} alt='Паранит Лосьон'/></i>
+            </span>
+          <span className='caption'>
+            <span>Недорого и эффективно</span>
+          </span>
+        </a>
+        <a href='/catalog/shampoo-cond/' className='catalog-item ext' id='bx_3218110189_168'>
+          <span className='img'>
+            <span className='item-label-sect d-hide-xs'>Шампунь-Кондиционер . Уход после обработки.</span>
+            <i><img src={`${window.env.apiHost}/images/kond_1.png`} alt='Шампунь-Кондиционер . Уход после обработки.'/></i>
+          </span>
+          <span className='caption'>
+            <span>Легко смывает спрей и лосьон</span>
+          </span>
+        </a>
+      </div>
     </div>
   </div>
 );

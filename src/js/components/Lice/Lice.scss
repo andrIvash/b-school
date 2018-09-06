@@ -117,3 +117,55 @@
     background-size: auto, 240%;
   }
 }
+
+.lice {
+  .d-catalog-scheme { margin-bottom: rem(-110px); font-family: $title-font,sans-serif; color: #4c4c4c; }
+  .d-catalog-scheme-i { 
+    position: relative;
+    width: rem(1090px);
+    height: rem(491px);
+    @include url('bg_catalog_scheme.png');
+  }
+  .d-catalog-scheme .area { position: absolute; font-size: rem(26px); line-height: 1; text-align: center; }
+  .d-catalog-scheme .area-0 { top: rem(60px); left: rem(245px); width: rem(568px); font-size: rem(30px); }
+  .d-catalog-scheme .area-1 { top: rem(185px); left: rem(25px); width: rem(300px); }
+  .d-catalog-scheme .area-2 { top: rem(180px); left: rem(395px); width: rem(280px); }
+  .d-catalog-scheme .area-3 { top: rem(180px); left: rem(780px); width: rem(310px); }
+  .d-catalog-scheme .area-4 { top: rem(290px); left: rem(125px); width: rem(300px); }
+  .d-catalog-scheme .area-5 { top: rem(290px); left: rem(635px); width: rem(325px); }
+
+  .catalog-item .item-label-sect { left: 40px; right: auto; padding-right: 40px; background: none !important; font-size: 22px; line-height: 70px; font-family: 'Neucha',sans-serif; color: #404040; white-space: nowrap; }
+  .catalog-item .label-spray { padding-right: 55px; }
+
+  .catalog-items { margin: 0 -200px 3em 0; }
+  .catalog-item { display: inline-block; vertical-align: top; margin-right: 20px; position: relative; }
+  .catalog-item .img { 
+    display: block;
+    position: relative;
+    width: 243px;
+    height: 530px;
+    @include url('bg-item.png');
+    background-position: 0 0;
+  };
+  .catalog-item .img i { position: absolute; bottom: 60px; left: 45px; right: 38px; height: 380px; line-height: 380px; }
+  .catalog-item .img i img { display: inline-block; vertical-align: bottom; max-width: 100%; max-height: 100%; }
+  .catalog-item .item-label-sect { top: 10px; height: 60px; background-position: 70% 50%; }
+  .catalog-item .caption {
+    display: block;
+    margin: 0 0 0 10px;
+    padding-left: 15px;
+    @include url('bg-caption.png');
+  }
+  .catalog-item .item-ico { bottom: 1.5em; right: -.5em; }
+
+
+  .catalog-item.ext { position: absolute; top: 100%; right: 105px; margin-top: 80px; width: 218px; }
+  .catalog-item.ext .img { 
+    width: 218px;
+    height: 368px;
+    @include url('bg_item_ext.png');
+  }
+  .catalog-item.ext .img i { left: 35px; height: 260px; line-height: 260px; text-align: center; }
+  .catalog-item.ext .item-label-sect { top: auto; bottom: 100%; left: 0; right: 0; margin-bottom: -5px; padding: 0; height: auto; line-height: 1; text-align: center; white-space: normal; }
+
+}
