@@ -5,7 +5,9 @@ import Chat from '../Chat/Chat';
 
 const Consultant = () => (
   <div className='consultant'>
-    <Chat />
+    <div className='container'>
+      <Chat />
+    </div>
   </div>
 );
 
