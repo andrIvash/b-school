@@ -84,6 +84,7 @@
   position: relative;
   background: linear-gradient(180deg, transparent 50%, $color-backlink 50%);
   padding: rem(6px) rem(3px);
+  z-index: 60;
 
   &:hover {
     text-decoration: none;
@@ -222,3 +223,11 @@
     }
   }
 }
+
+.acco-child .accordion__body>:last-child  {
+  margin-bottom: rem(20px) !important;
+}
+.accordion__body>:last-child .chat-title, .accordion__title>:last-child .chat-title {
+  margin-bottom: rem(20px) !important;
+}
+

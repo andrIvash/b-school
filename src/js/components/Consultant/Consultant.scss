@@ -1,0 +1,22 @@
+.consultant {
+  .accordion {
+    border: 0;
+  }
+
+  .accordion__body {
+    padding: 0;
+  }
+
+  .chat .acco-child .accordion__body > .chat-title {
+    margin-bottom: rem(20px) !important;
+  }
+
+  .acco-child .sectionList-elem {
+    width: 80%;
+  }
+
+  .acco-child .accordion__title {
+    margin-bottom: 0;
+  }  
+
+}

@@ -227,7 +227,7 @@ class App extends Component<Props, State> {
             ref={this.backTop}
             type='button'
             >
-            вверх
+            Наверх
           </button>
         </ErrorBoundary>
       </div>
