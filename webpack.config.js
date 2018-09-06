@@ -71,7 +71,7 @@ const config = {
       mobile: true,
       lang: 'en-US',
       links: [
-        // 'https://fonts.googleapis.com/css?family=Roboto',
+        //  'https://fonts.googleapis.com/css?family=Roboto',
         {
           href: '/apple-touch-icon.png',
           rel: 'apple-touch-icon',
