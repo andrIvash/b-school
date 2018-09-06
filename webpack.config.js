@@ -70,7 +70,7 @@ const config = {
       ],
       // inlineManifestWebpackName: 'webpackManifest',
       // scripts: [
-        // 'http://example.com/somescript.js',
+        // 'http://example.com/somescript.js',  
         // {
         //   src: '/myModule.js',
         //   type: 'module'
