@@ -142,7 +142,7 @@ const config = {
           {
             loader: 'url-loader',
             options: {
-              limit: 50,
+              limit: 1,
               mimetype: 'image/svg+xml',
               publicPath: '../../',
               name: './assets/images/[name].[ext]',
@@ -153,14 +153,22 @@ const config = {
       {
         test: /\.(png)$/,
         use: [
+          // {
+          //   loader: 'url-loader',
+          //   options: {
+          //     limit: 1,
+          //     mimetype: 'image/png',
+          //     publicPath: '../../',
+          //     name: './assets/images/[name].[ext]',
+          //   },
+          // },
           {
-            loader: 'url-loader',
-            options: {
-              limit: 100000,
-              mimetype: 'image/png',
-              publicPath: '../../',
-              name: './assets/images/[name].[ext]',
-            },
+            loader: 'file-loader',
+              options: {
+                mimetype: 'image/png',
+                publicPath: '../../',
+                name: 'assets/images/[name].[ext]',
+            }
           },
         ],
       },
