@@ -20,7 +20,7 @@ type State = {
 };
 
 type Props = {};
-const api = new API();
+let api;
 
 // modal settings
 Modal.setAppElement('#app');
@@ -46,12 +46,13 @@ class App extends Component<Props, State> {
     this.state = {
       isLoading: false,
       user: null,
-      activeScreen: null,
+      activeScreen: 'main',
       modalIsOpen: false,
     };
   }
 
   componentDidMount() {
+    api = new API();
     console.log('Running App version ! ' + window.env.apiHost);
     window.addEventListener('scroll', this.handleScroll);
     api.init();
@@ -170,7 +171,7 @@ class App extends Component<Props, State> {
 	}
 
   render() {
-    const footerStyle = {height: '50px'};
+    const footerStyle = {height: '70px'};
     const { isLoading, modalIsOpen, user } = this.state;
     if (isLoading) {
       return (

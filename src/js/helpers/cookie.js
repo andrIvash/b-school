@@ -11,7 +11,7 @@ export const Cookie = {
       '(?:^|; )' + name.replace(/([.$?*|{}()[]\\\/\+^])/g, '\\$1') + '=([^;]*)',
     ));
 
-    return matches ? decodeURIComponent(matches[1]) : null;
+    return matches ? decodeURIComponent(matches[1]) : undefined;
   },
 
 /**

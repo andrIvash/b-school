@@ -91,8 +91,9 @@ const config = {
       title: 'Паранит',
       window: {
         env: {
-          apiHost: 'http://localhost:3000',
-          //apiHost: 'https://andrivash.github.io/b-school/assets',
+          // apiHost: 'http://localhost:3000',
+          // apiHost: 'https://andrivash.github.io/b-school/assets',
+          apiHost: 'https://ad.csdnevnik.ru/special/staging/paranit',
         },
       },
     }),

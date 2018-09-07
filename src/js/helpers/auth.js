@@ -25,7 +25,7 @@ export const Auth = {
 
       if (void 0 !== error[1]) {
         Cookie.delete('token');
-        this.token = null;
+        this.token = undefined;
       } else {
         var url;
         const appOptions = getSettings();

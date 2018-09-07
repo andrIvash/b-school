@@ -14,9 +14,14 @@ const Header = (props: Props) => (
     <div className='container'>
       <a
         className='header__link logo'
-        href='/'
-        onClick={(evt) => props.selectScreen(evt)}
-        title='Лого'
+        href={props.activeScreen === 'main' ? 'http://vsham.net/?utm_source=dnevnik&utm_medium=article' : '/'}
+        onClick={
+          props.activeScreen === 'main' ? () => gtag('event', 'Лого Клик', { 'event_category': 'Лого', 'event_action': 'Клик', }) :
+          (evt) => props.selectScreen(evt)
+        }
+        rel='noreferrer noopener'
+        title='Паранит'
+        target='_blank'
         >
         <picture>
           <img

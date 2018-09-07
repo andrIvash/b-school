@@ -6,7 +6,7 @@ import { getSettings } from './settings';
 
 export class API {
   constructor(token) {
-    this.token = token || null;
+    this.token = token;
     this.model = {};
     this.appOptions = getSettings();
   }

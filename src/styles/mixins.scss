@@ -1,7 +1,7 @@
 
 
 @mixin url($file) {
-  background-image: url('../images/' + $file);
+  background-image: url('https://ad.csdnevnik.ru/special/staging/paranit/images/' + $file);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;

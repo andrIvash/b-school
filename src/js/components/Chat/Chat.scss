@@ -49,6 +49,7 @@
       height: 60%;
       max-height: 130px;
       margin-bottom: rem(20px);
+      width: auto;
 
       @include tablet {
         max-height: 80px;

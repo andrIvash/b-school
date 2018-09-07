@@ -312,8 +312,9 @@ const Lice = (props: Props) => (
           onClick={()=> {
             gtag('event', 'Кнопка Клик', { 'event_category': 'Кнопка', 'event_action': 'Клик', });
           }}
-          
-          title='Узнать больше'
+          rel='noreferrer noopener'
+          target='_blank'
+          title='Паранит Узнать больше'
           >
           Узнать больше
         </a>

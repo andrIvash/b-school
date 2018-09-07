@@ -82,7 +82,7 @@
   text-decoration: none;
   color: $color-dark;
   position: relative;
-  background: linear-gradient(180deg, transparent 50%, $color-backlink 50%);
+  background: linear-gradient(180deg, transparent 55%, $color-backlink 50%);
   padding: rem(6px) rem(3px);
   z-index: 60;
 
@@ -258,6 +258,9 @@
   font-family: $base-font;
   font-size: rem(18px);
   line-height: 1.2;
-  text-align: center;
   width: 100%;
+  height: rem(60px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
