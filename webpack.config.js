@@ -34,10 +34,6 @@ const config = {
   },
   plugins: [
     new CleanWebpackPlugin('dist'),
-    new CopyWebpackPlugin(
-      [{ from: 'images', to: 'assets/images' }],
-      { debug: 'info' },
-    ),
     new HtmlWebpackPlugin({
       inject: false,
       filename: 'index.html',
@@ -222,6 +218,7 @@ module.exports = function(env) {
       new OptimizeCssAssetsPlugin({
         cssProcessorOptions: { discardComments: { removeAll: true } },
       }),
+      new CopyWebpackPlugin([{ from: 'images', to: 'assets/images' }], { debug: 'info' }),
       // new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
       // new FaviconsWebpackPlugin('./favicon.png')
     ]);

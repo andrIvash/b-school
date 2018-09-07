@@ -56,7 +56,11 @@ body {
   margin: 0;
   padding: 0;
 
-  @include url('Rectangle-new.jpg');
+  @include url('Rectangle.png');
+
+  @include tablet {
+    @include url('Rectangle-new.jpg');
+  }
 }
 
 .wrapper {

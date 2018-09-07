@@ -33,7 +33,7 @@ export function getSettings() {
     appOptions = {
       authUrl: 'https://login.school.mosreg.ru/oauth2',
       grantUrl: 'https://api.school.mosreg.ru/v1/authorizations',
-      scope: 'CommonInfo,ContactInfo',
+      scope: 'ContactInfo',
       // scope: `CommonInfo,ContactInfo,EducationalInfo,FriendsAndRelatives,
       //   Messages,Files`,
       // clientId: '8b6c6ef6c79a405fbcda77923594eccb',
@@ -41,30 +41,30 @@ export function getSettings() {
       clientId: '5736634830804e18a2eafbf28806b449',
 
       redirectUrl: window.location.href + '/?auth=true',
-      provider: 'mosreg-foxword',
+      provider: 'mosreg-paranit',
       api: 'https://api.school.mosreg.ru/v1/',
       isMobile: isMobile(),
       userLink: 'https://school.mosreg.ru/user/user.aspx?user=',
       classLink: 'https://schools.school.mosreg.ru/class.aspx?class=',
-      cdnPath: 'https://ad.csdnevnik.ru/special/staging/prosveshenie',
+      cdnPath: 'https://ad.csdnevnik.ru/special/staging/paranit/',
     };
 
    } else {
     appOptions = {
       authUrl: 'https://login.dnevnik.ru/oauth2',
       grantUrl: 'https://api.dnevnik.ru/v1/authorizations',
-      scope: 'CommonInfo,ContactInfo',
+      scope: 'ContactInfo',
       // scope: `CommonInfo,ContactInfo,EducationalInfo,FriendsAndRelatives,
       //   Messages,Files`,
-      // clientId: '4d34a49fc2824bfcabdadda2a6381f58',
+      // clientId: '4d34a49fc2824bfcabdadda2a6381f58', API key, Secret Key doesn't use
       clientId: '5736634830804e18a2eafbf28806b449',
       redirectUrl: window.location.href + '?auth=true',
-      provider: '1af-foxword',
+      provider: '1af-paranit',
       api: 'https://api.dnevnik.ru/v1/',
       isMobile: isMobile(),
       userLink: 'https://dnevnik.ru/user/user.aspx?user=',
       classLink: 'https://schools.dnevnik.ru/class.aspx?class=',
-      cdnPath: 'https://ad.csdnevnik.ru/special/staging/prosveshenie',
+      cdnPath: 'https://ad.csdnevnik.ru/special/staging/paranit/',
     };
    }
 
