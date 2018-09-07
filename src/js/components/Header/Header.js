@@ -17,7 +17,10 @@ const Header = (props: Props) => (
         href={props.activeScreen === 'main' ? 'http://vsham.net/?utm_source=dnevnik&utm_medium=article' : '/'}
         onClick={
           props.activeScreen === 'main' ? () => gtag('event', 'Лого Клик', { 'event_category': 'Лого', 'event_action': 'Клик', }) :
-          (evt) => props.selectScreen(evt)
+          (evt) => {
+            gtag('event', 'Главная Клик', { 'event_category': 'Главная', 'event_action': 'Клик', });
+            props.selectScreen(evt);
+          }
         }
         rel='noreferrer noopener'
         title='Паранит'
@@ -37,7 +40,12 @@ const Header = (props: Props) => (
             'menu__link active' : 'menu__link'}
           data-screen='consultant'
           href='/'
-          onClick={(evt) => props.selectScreen(evt)}
+          onClick={
+            (evt) => {
+              gtag('event', 'Консультант Клик', { 'event_category': 'Консультант', 'event_action': 'Клик', });
+              props.selectScreen(evt);
+            }
+          }
           > Интерактивный консультант
         </a>
         <a
@@ -45,7 +53,12 @@ const Header = (props: Props) => (
             'menu__link active' : 'menu__link'}
           data-screen='bullying'
           href='/'
-          onClick={(evt) => props.selectScreen(evt)}
+          onClick={
+            (evt) => {
+              gtag('event', 'Буллинг Клик', { 'event_category': 'Буллинг', 'event_action': 'Клик', });
+              props.selectScreen(evt);
+            }
+          }
           >Инфографика о буллинге
         </a>
         <a
@@ -53,7 +66,12 @@ const Header = (props: Props) => (
             'menu__link active' : 'menu__link'}
           data-screen='lice'
           href='/'
-          onClick={(evt) => props.selectScreen(evt)}
+          onClick={
+            (evt) => {
+              gtag('event', 'Педикулез Клик', { 'event_category': 'Педикулез', 'event_action': 'Клик', });
+              props.selectScreen(evt);
+            }
+          }
           >
           Как защитить себя и ребенка от вшей
         </a>
@@ -87,7 +105,12 @@ const Header = (props: Props) => (
             className='menu__link'
             data-screen='main'
             href='/'
-            onClick={(evt) => props.burgerToggle(evt)}
+            onClick={
+              (evt) => {
+                gtag('event', 'Главная Клик', { 'event_category': 'Главная', 'event_action': 'Клик', });
+                props.burgerToggle(evt);
+              }
+            }
             >
             Главная
           </a>
@@ -95,7 +118,12 @@ const Header = (props: Props) => (
             className='menu__link'
             data-screen='consultant'
             href='/'
-            onClick={(evt) => props.burgerToggle(evt)}
+            onClick={
+              (evt) => {
+                gtag('event', 'Консультант Клик', { 'event_category': 'Консультант', 'event_action': 'Клик', });
+                props.burgerToggle(evt);
+              }
+            }
             >
             Интерактивный консультант
           </a>
@@ -103,7 +131,12 @@ const Header = (props: Props) => (
             className='menu__link'
             data-screen='bullying'
             href='/'
-            onClick={(evt) => props.burgerToggle(evt)}
+            onClick={
+              (evt) => {
+                gtag('event', 'Буллинг Клик', { 'event_category': 'Буллинг', 'event_action': 'Клик', });
+                props.burgerToggle(evt);
+              }
+            }
             >
             Инфографика о буллинге
           </a>
@@ -111,7 +144,12 @@ const Header = (props: Props) => (
             className='menu__link'
             data-screen='lice'
             href='/'
-            onClick={(evt) => props.burgerToggle(evt)}
+            onClick={
+              (evt) => {
+                gtag('event', 'Педикулез Клик', { 'event_category': 'Педикулез', 'event_action': 'Клик', });
+                props.burgerToggle(evt);
+              }
+            }
             >
             Как защитить себя и ребенка от вшей
           </a>

@@ -199,9 +199,8 @@ class App extends Component<Props, State> {
               onRequestClose={this.closeModal}
               style={customStyles}
               >
-              <h2>Hello</h2>
+              <h4>Страница доступна только для родителей и учителей</h4>
               <button onClick={this.closeModal}>close</button>
-              <div>I am a modal</div>
             </Modal>
           </ErrorBoundary>
         </div>

@@ -142,3 +142,9 @@ body {
     transition: none !important;
   }
 }
+
+.ReactModalPortal {
+  position: fixed;
+  top: 0;
+  z-index: 22;
+}
