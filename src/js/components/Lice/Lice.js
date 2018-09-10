@@ -163,7 +163,16 @@ const Lice = (props: Props) => (
           При посещении бассейна обязательно надевайте резиновую шапочку
         </li>
         <li className='sectionList-elem'>
-          Используйте средства для профилактики педикулеза в домашних условиях
+          Используйте средства для профилактики педикулеза в домашних условиях, например,
+          <a
+            className='sectionList-elem__link'
+            href='http://vsham.net/profilactic/?utm_source=dnevnik&utm_medium=article'
+            rel='noreferrer noopener'
+            title='Паранит Репеллент'
+            target='_blank'
+            >
+             &nbsp;Паранит Репеллент
+          </a>
         </li>
         <li className='sectionList-elem'>
           Не пользуйтесь чужими расческами или наушниками

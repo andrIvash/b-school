@@ -126,6 +126,15 @@
   @include tablet {
     width: 100%;
   }
+
+  .sectionList-elem__link {
+    color: $color-dark;
+    text-decoration: none;
+
+    &:hover, &:active {
+      text-decoration: underline;
+    }
+  }
 }
 
 .sectionList--foto {

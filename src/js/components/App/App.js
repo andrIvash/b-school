@@ -147,6 +147,7 @@ class App extends Component<Props, State> {
     const elem = evt.target;
     if (elem.dataset.screen) {
       this.setState({ activeScreen: elem.dataset.screen });
+      this.scrollTop();
     }
   }
 
@@ -219,7 +220,7 @@ class App extends Component<Props, State> {
             {this.activeScreen()}
           </div>
           <footer style={footerStyle} />
-          <div className='banner'>Имеются противопоказания, перед применением необходимо ознакомиться с инструкцией</div>
+          <div className='banner'>НЕ ЯВЛЯЕТСЯ ЛЕКАРСТВЕННЫМ СРЕДСТВОМ. ОЗНАКОМЬТЕСЬ С ИНСТРУКЦИЕЙ</div>
           <button
             className='back-top'
             onClick={this.scrollTop}
