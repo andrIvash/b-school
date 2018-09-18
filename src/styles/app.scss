@@ -128,11 +128,11 @@
   }
 
   .sectionList-elem__link {
-    color: $color-dark;
+    color: $color-title;
     text-decoration: none;
 
     &:hover, &:active {
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 }
